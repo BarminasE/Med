@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Times Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>5 Times Table</h1>
+    <table id="timesTable">
+        <thead>
+            <tr>
+                <th>Multiplier</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be added dynamically here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Get the table body element
+        const tableBody = document.querySelector('#timesTable tbody');
+
+        // Loop to create the 5 times table
+        for (let i = 1; i <= 10; i++) {
+            // Create a new row
+            const row = document.createElement('tr');
+
+            // Create the "Multiplier" cell
+            const multiplierCell = document.createElement('td');
+            multiplierCell.textContent = `5 x ${i}`;
+
+            // Create the "Result" cell
+            const resultCell = document.createElement('td');
+            resultCell.textContent = 5 * i;
+
+            // Append both cells to the row
+            row.appendChild(multiplierCell);
+            row.appendChild(resultCell);
+
+            // Append the row to the table body
+            tableBody.appendChild(row);
+        }
+    </script>
+
+</body>
+</html>
